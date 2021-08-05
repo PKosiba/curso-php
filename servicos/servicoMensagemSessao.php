@@ -13,19 +13,17 @@ function obterMensagemSucesso(): ?string        //OK
     return null;                                //OK
 }
 
-function setarMensagemErro(string $mensagem): void//Void indica nao ter retorno
-{
+function setarMensagemErro(string $mensagem): void//Void indica nao ter retorno //ok
+{//ok
     $_SESSION['mensagem-de-erro'] = $mensagem;//Setar a mensagem de erro dentro da variavel $mensagem 
-}
-function obterMensagemErro(): ?string //"?string" pode receber string ou boleano
-{
-    if (isset($_SESSION['mensagem-de-erro'])) 
-    {
-        return $_SESSION['mensagem-de-erro'];
-    }
-
-    return null;
-}
+}//ok
+function obterMensagemErro(): ?string //"?string" pode receber string ou boleano //ok
+{//ok
+    if (isset($_SESSION['mensagem-de-erro'])) //ok
+        return $_SESSION['mensagem-de-erro'];//ok
+    
+    return null;//ok
+}//ok
 
 function removerMensagemSucesso(): void         //OK
 {

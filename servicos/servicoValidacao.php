@@ -4,7 +4,7 @@ function validaNome(string $nome) : bool
 {
     if(empty($nome))
     {
-        setarMensagemErro('O nome não pode estar vazio. Por favor preencha-o novamente');
+        setarMensagemErro('O nome não pode estar vazio.');
         return false;
     }
     //verifica se o campo nome tem pelo menos 3 caracteres
@@ -26,8 +26,18 @@ function validaIdade(string $idade): bool
     //Permite somente números no campo idade
     if (!is_numeric($idade))
     {
-        setarMensagemErro('Informe um número para a idade. Por favor preencha-o novamente');
+        setarMensagemErro('Informe um número para a idade. Por favor preencha-o');
         return false;
     }
     return true;// true para continuar com o codigo
+}
+function validaSexo(string $sexo): bool
+{
+    if (empty($sexo))
+    {
+        setarMensagemErro('O sexo não pode estar vazio. Por favor preencha-o');
+        return false;
+    }
+    return true;
+    
 }

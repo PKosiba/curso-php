@@ -48,6 +48,7 @@ include 'servicos/servicoMensagemSessao.php';
                      ?>
                     <p>Seu Nome: <input type="text" name="nome" /></p>
                     <p>Sua Idade: <input type="text" name="idade" /></p>
+                    <p>Seu Sexo: <input type="text" name='sexo'></p>
                     <p><input type="submit" value="Salvar" /></p>	
             </form>
 	</body>

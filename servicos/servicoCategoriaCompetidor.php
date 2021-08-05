@@ -1,5 +1,5 @@
 <?php
-function defineCategoriaCompetidor(string $nome, string $idade) : ?string 
+function defineCategoriaCompetidor(string $nome, string $idade, string $sexo) : ?string 
 {
     $categorias = [];
     $categorias[] = 'infantil';
@@ -8,55 +8,56 @@ function defineCategoriaCompetidor(string $nome, string $idade) : ?string
     $categorias[] = 'idoso';
     
     //Se validaNome e validaIdade for true executa o codigo
-    if (validaNome ($nome)&& validaIdade($idade))
-    {
+    if (validaNome ($nome)&& validaIdade($idade)&& validaSexo($sexo))//ok
+    {//ok
         removerMensagemErro();
-        if ($idade >= 6 && $idade <= 12)
-        {
-            for($i = 0; $i <= count($categorias);$i++)
-            {
-                if ($categorias[$i] == 'infantil') 
+        if ($idade >= 6 && $idade <= 12)//ok
+        {//ok
+            for($i = 0; $i <= count($categorias);$i++)//ok
+            {//ok
+                if ($categorias[$i] == 'infantil') //ok
                 {   /*função antes de setar a mensagem de sucesso em 'servicoMensagemSessao.php'
                     *$_SESSION['mensagem-de-sucesso'] = "O nadador ".$nome."  compete na categoria ".$categorias[$i]; 
                     */
-                    setarMensagemSucesso("O nadador ".$nome."  compete na categoria ".$categorias[$i]);
-                    return null;
-                }
-            }
-        }
-        else if ($idade >= 13 && $idade <= 18) 
-        {
-            for ($i = 0; $i <= count($categorias); $i++)
-            { 
-                if ($categorias[$i] == 'adolescente') 
-                {
+                    setarMensagemSucesso("O nadador ".$nome."  compete na categoria ".$categorias[$i].' '.$sexo);//ok
+                    return null;//ok
+                }//ok
+            }//ok
+        }//ok
+        else if ($idade >= 13 && $idade <= 18) //ok
+        {//ok
+            for ($i = 0; $i <= count($categorias); $i++)//ok
+            { //ok
+                if ($categorias[$i] == 'adolescente')
+                { //ok
+                //ok
                     /*função antes de setar a mensagem de sucesso em 'servicoMensagemSessao.php'
                      *$_SESSION['mensagem-de-sucesso'] = "O nadador ".$nome."  compete na categoria ".$categorias[$i]; 
                      */
-                    setarMensagemSucesso("O nadador ".$nome."  compete na categoria ".$categorias[$i]);
-                    return null;        
-                }
+                    setarMensagemSucesso("O nadador ".$nome."  compete na categoria ".$categorias[$i].' '.$sexo);//ok
+                    return null;//ok   
+                }     
             }
         }
         else
-        {
-            for ($i=0; $i <= count($categorias); $i++)
-            { 
-                if ($categorias[$i] == 'adulto') 
-                {
+        {//ok
+            for ($i=0; $i <= count($categorias); $i++)//ok
+            { //ok
+                if ($categorias[$i] == 'adulto') //ok
+                {//ok
                     /*função antes de setar a mensagem de sucesso em 'servicoMensagemSessao.php'
                      *$_SESSION['mensagem-de-sucesso'] = "O nadador ".$nome."  compete na categoria ".$categorias[$i]; 
                      */
-                    setarMensagemSucesso("O nadador ".$nome."  compete na categoria ".$categorias[$i]);
-                    return null;
-                }
-            }
-        }
-    }
-    else 
-        {
+                    setarMensagemSucesso("O nadador ".$nome."  compete na categoria ".$categorias[$i].' '.$sexo);//ok
+                    return null;//ok
+                }//ok
+            }//ok
+        }//ok
+    }//ok
+        else //ok
+        {//ok
             //Se validaNome e/ou validaIdade for false exibe codigo erro
             removerMensagemSucesso();
-            return obterMensagemErro();
-        }
-}
+            return obterMensagemErro();//ok
+        }//ok*/
+}//ok

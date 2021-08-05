@@ -6,9 +6,10 @@ include 'servicos/servicoMensagemSessao.php';
 include 'servicos/servicoCategoriaCompetidor.php';
 include 'servicos/servicoValidacao.php';
 
-$nome = $_POST['nome'];
-$idade = $_POST['idade'];
+$nome = $_POST['nome'];                             //ok
+$idade = $_POST['idade']; 
+$sexo = $_POST['sexo'];
 
-defineCategoriaCompetidor($nome, $idade);
+defineCategoriaCompetidor($nome, $idade,$sexo);           //ok
 
-header('location: /index.php');
+header('location: /index.php');                     //ok
