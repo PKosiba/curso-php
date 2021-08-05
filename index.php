@@ -32,7 +32,7 @@ include 'servicos/servicoMensagemSessao.php';
                             /*Mensagem antes de setar em 'servicoValidacao'  
                              *$mensagemDeSucesso = isset($_SESSION['mensagem-de-sucesso']) ?$_SESSION['mensagem-de-sucesso'] : '';
                             */
-                        $mensagemdeSucesso= obterMensagemSucesso();
+                        $mensagemDeSucesso= obterMensagemSucesso();
                         if (!empty($mensagemDeSucesso))
                         {
                             echo $mensagemDeSucesso;
