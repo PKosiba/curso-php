@@ -106,22 +106,24 @@ $p =new Pessoa("crudpdo", "localhost", "root", ""); //
 					<!--HTML-->
 										<td><!--colocado dentro da linha para que cada uma tenha um edit excl-->
 											<a href="index.php?id_up= <?php echo $dados[$i]['id']?>">Editar</a>
-											<a href="index.php?id=<?php echo $dados[$i]['id']?>">Excluir</a>
+											<a href="index.php?id= <?php echo $dados[$i]['id']?>">Excluir</a>
 										</td>
 					<!--/HTML-->					 
 					<?php
 						echo "</tr>";//encerra a linha
 							}
 						}
-						else{
-							?>
+						else
+						{
+						
+					?>
+			</table>
 							<div class="aviso">
 								<h4>Ainda não há pessoas cadastradas!</h4>
 							</div>
-							<?php
+					<?php	
 						}
-					?>
-			</table>
+					?>					
 		</section>
 	</body>
 </html>
