@@ -1,0 +1,57 @@
+input{
+	outline: none;	
+	display: block;
+	width: 450px;
+	height: 55px;
+	margin: 10px;
+	border-radius: 30px;
+	border:  1px solid black;
+	font-size: 16pt;
+	padding: 10px 20px;
+	background-color: rgba(255, 255, 255, 0.1);
+	color: white;
+}
+form{
+	/*background-color: red;*/
+}
+div#corpo-form{
+	/*background-color: yellow;*/
+	width: 400px;
+	margin: 150px auto 0px auto;
+}
+div#corpo-form-cad{
+	width: 400px;
+	margin: 20px auto 0px auto;
+}
+body{
+	background-image: url("../imagem/fundo.jpg");
+	background-position: 5% 80%;
+}
+h1{
+	text-align: center;
+	padding: 5px;
+	color: white;
+}
+a{
+	color: #a28115;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+}
+a:hover{
+	text-decoration: underline;
+}
+input[type=submit]{
+	background-color: darkred;
+	border: none;
+	cursor: pointer	;
+}
+::-webkit-input-placeholder{
+	color: #fff;
+}
+::-moz-placeholder{
+	color: #fff;
+}
+::-ms-input-placeholder{
+	color: #fff;
+}
