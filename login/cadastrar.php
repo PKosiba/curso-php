@@ -1,9 +1,7 @@
 
 <?php 
 	require_once'usuarios.php';
-
-	$u=new Usuario
-
+	$usuario=new Usuario;
 ?>
 
 <!DOCTYPE html>
@@ -36,35 +34,54 @@
 		/*Verificar se todos os campos foram pre-enchidos*/
 		if(!empty($nome) && !empty($email) && !empty($telefone) && !empty($senha) && !empty($confsenha))
 		{
-			$u->conectar("login","localhost", "root", "");
-			if($u->msgErro == "")
+			$usuario->conectar("login","localhost", "root", "");
+			if($usuario->msgErro == "")
 			{
 				if($senha == $confsenha)
 				{
 					if($u->cadastrar($nome, $email, $telefone, $senha, $confsenha))
 					{
-						echo "Cadastrado com sucesso! Acesse para entrar";
+						?>
+						<div id="msg-sucesso">
+						Cadastrado com sucesso! Acesse para entrar
+						</div>
+						<?php
 					}
 					else
-					{
-						echo "Email já cadastrado";
+					{	
+						?>
+						<div id="msg-erro">
+						Email já cadastrado
+						</div>
+						<?php
 					}
 				}
 				else{
-					echo "senha e confirmar senha devem ser a mesma";
+					?>
+					<div id="msg-erro">
+					senha e confirmar senha devem ser a mesma
+					</div>
+					<?php
 				}
 			}
 			else
 			{
-				echo "Erro: ".$u->msgErro;
+				?>
+				<div id="msg-erro">
+				<?php echo "Erro: ".$u->msgErro;?>
+				</div>
+				<?php
 			}
 		}
 		else
 		{
-			echo "Preencha todos os Campos!";
+			?>
+			<div id="msg-erro">
+			Preencha todos os Campos!
+			</div>
+			<?php
 		}
 	}
 	 ?>
-	}
 </body>
 </html> 	 

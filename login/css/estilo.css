@@ -55,3 +55,17 @@ input[type=submit]{
 ::-ms-input-placeholder{
 	color: #fff;
 }
+div#msg-sucesso{
+	width: 400px;
+	margin: 10px auto;
+	border: darkred;
+	background-color: green;
+	padding: 10px auto;
+}
+div#msg-erro{
+	width: 400px;
+	margin: 10px auto;
+	padding: 10px;
+	background-color: gray;
+	border: darkred;
+}
